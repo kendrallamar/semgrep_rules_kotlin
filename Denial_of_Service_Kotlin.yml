@@ -1,0 +1,18 @@
+rules:
+  - id: 
+    languages: Denial of Service Regular Expression
+      - Kotlin
+    message :  Denial of Service (DoS) 
+    metadata:
+      reference : 
+      - https://vulncat.fortify.com/en/weakness?codelang=Kotlin
+      category : security
+      cwe :   CWE-1333, Inefficient Regular Expression Complexity
+      owasp : DOS
+      technology:
+      - android 
+    patterns:
+      - pattern: (e+)+
+      - pattern: ([a-zA-Z]+)*
+      - pattern: (e|ee)+
+    severity: WARNING
