@@ -1,7 +1,6 @@
 rules:
   - id: Cross-Site Scripting-Inter-Component Communication
-    languages:
-      - Kotlin
+    languages: [Kotlin]
     message : Cross-site scripting (XSS) vulnerabilities
     metadata:
       reference : 
@@ -15,5 +14,5 @@ rules:
       - pattern: |
           $METH.javaScriptEnabled = true
           ...
-          $X.getString("javascript:")
+          $SOME.getString(...)
     severity: WARNING
