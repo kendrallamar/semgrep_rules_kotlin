@@ -2,14 +2,12 @@ rules:
   - id: Server_Side_Request_Forgery
     languages: 
       - Kotlin
-    message : Server Side Request Forgery
+    message : Server Side Request Forgery vulnerability might be possible
     metadata:
-      reference : 
-      - https://vulncat.fortify.com/en/weakness?codelang=Kotlin&po=3
+      reference : https://vulncat.fortify.com/en/weakness?codelang=Kotlin&po=3
       category : security
-      message : Server Side Request Forgery vulnerability might be possible
-      cwe : CWE-918, Common Weakness Enumeration
-      owasp : Server-Side Request Forgery
+      cwe : "CWE-918, Common Weakness Enumeration"
+      owasp : "Server-Side Request Forgery"
       technology:
       - android 
     patterns:

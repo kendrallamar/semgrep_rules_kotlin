@@ -2,13 +2,12 @@ rules:
   - id: Formula_injection
     languages: 
       - Kotlin
-    message : Formulainjection
+    message : Formula Injection
     metadata:
-      reference : 
-      - https://pentestmag.com/formula-injection/ 
+      reference : https://pentestmag.com/formula-injection/ 
       category : security
-      cwe : CWE-1236, Common Weakness Enumeration
-      owasp : Injection
+      cwe : "CWE-1236, Common Weakness Enumeration"
+      owasp : "Injection"
       technology:
       - android 
     patterns:
