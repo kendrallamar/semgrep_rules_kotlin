@@ -1,0 +1,21 @@
+rules:
+  - id: Formula_injection
+    languages: 
+      - Kotlin
+    metadata:
+      reference : 
+      - https://pentestmag.com/formula-injection/ 
+      category : security
+      cwe : CWE-1236, Common Weakness Enumeration
+      owasp : Injection
+      technology:
+      - android 
+    patterns:
+      - pattern : |
+          $VAL = HttpHeaders()
+          ...
+          return ResponseEntity(...)
+      - pattern-inside: |
+          @$X
+            ...
+    severity: WARNING

@@ -1,0 +1,25 @@
+rules:
+  - id: Server_Side_Request_Forgery
+    languages: 
+      - Kotlin
+    metadata:
+      reference : 
+      - https://vulncat.fortify.com/en/weakness?codelang=Kotlin&po=3
+      category : security
+      message : Server Side Request Forgery vulnerability might be possible
+      cwe : CWE-918, Common Weakness Enumeration
+      owasp : Server-Side Request Forgery
+      technology:
+      - android 
+    patterns:
+      - pattern-inside : |
+            val $VAR: String = request.getParameter("...")
+            ...
+      - pattern : |
+            val $HTTP: CloseableHttpClient = HttpClients.createDefault()
+            ...
+            val $HTGET = HttpGet($VAR)
+            ...
+            val $RES: CloseableHttpResponse = httpclient.execute($HTGET)
+    severity: WARNING
+

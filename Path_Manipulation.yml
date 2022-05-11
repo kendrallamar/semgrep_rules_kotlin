@@ -1,0 +1,18 @@
+rules:
+  - id: Path_Manipulation
+    languages: 
+      - Kotlin
+    metadata:
+      reference : 
+      - https://vulncat.fortify.com/en/weakness?codelang=Kotlin&po=3
+      category : security
+      cwe : CWE-73, Common Weakness Enumeration
+      owasp : Path Traversal
+      technology:
+      - android 
+    patterns:
+      - pattern-inside : |
+            val $VAR: String = request.getParameter("...")
+            ...
+      - pattern-regex : File\(
+    severity: WARNING
