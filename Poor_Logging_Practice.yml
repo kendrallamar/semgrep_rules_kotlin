@@ -1,17 +1,16 @@
 rules:
-  - id: Poor_Logging_Practice    
-    languages: 
-      - Kotlin
-    message : Poor Logging  
+  - id: Poor_Logging_Practice
+    patterns:
+      - pattern-either:
+        - pattern: println("...")
+        - pattern: print("...")
+    message: Poor Logging
+    languages: [kotlin]
+    severity: WARNING
     metadata: 
         reference: https://vulncat.fortify.com/en/weakness?codelang=Kotlin&po=3
         category: security
-        cwe: "CWE-398, Common Weakness Enumeration"
-        owasp: "information Leakage and Improper Error Handling"
+        cwe: CWE-398, Common Weakness Enumeration
+        owasp: information Leakage and Improper Error Handling
         technology:
           - android
-    patterns:
-      - pattern-either:
-      - pattern: println("...")
-      - pattern: print("...")"
-    severity: WARNING
