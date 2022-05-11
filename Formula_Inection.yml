@@ -2,6 +2,7 @@ rules:
   - id: Formula_injection
     languages: 
       - Kotlin
+    message : Formulainjection
     metadata:
       reference : 
       - https://pentestmag.com/formula-injection/ 

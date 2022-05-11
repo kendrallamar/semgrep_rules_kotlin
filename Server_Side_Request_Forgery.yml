@@ -2,6 +2,7 @@ rules:
   - id: Server_Side_Request_Forgery
     languages: 
       - Kotlin
+    message : Server Side Request Forgery
     metadata:
       reference : 
       - https://vulncat.fortify.com/en/weakness?codelang=Kotlin&po=3

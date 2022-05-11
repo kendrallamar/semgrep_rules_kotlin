@@ -2,7 +2,8 @@ rules:
   - id: Path_Manipulation
     languages: 
       - Kotlin
-    metadata:
+    message : Path Manipulation           
+    metadata: 
       reference : 
       - https://vulncat.fortify.com/en/weakness?codelang=Kotlin&po=3
       category : security

@@ -1,11 +1,10 @@
 rules:
-- id: Poot_Logging_Practice
+- id: Poor_Logging_Practice
+  message : Poor Logging      
   patterns:
     - pattern-either:
       - pattern: println("...")
       - pattern: print("...")
-  message: |
-      
   languages: [kotlin]
   severity: WARNING
   metadata: 
