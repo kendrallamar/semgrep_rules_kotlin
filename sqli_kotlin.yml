@@ -5,7 +5,6 @@ rules:
     message: Sql Injection Kotlin calling calls.parameters
     metadata:
       references: https://www.stackhawk.com/blog/kotlin-sql-injection-guide-examples-and-preventioncve
-        - 
       category: security
       cwe: "CWE-89: SQL Injection"
       owasp: 'SQL Injection'
